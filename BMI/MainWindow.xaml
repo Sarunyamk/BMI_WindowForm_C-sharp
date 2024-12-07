@@ -1,0 +1,34 @@
+﻿<Window x:Class="BMI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BMI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="284*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="489*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="โปรแกรมคำนวณ ดัชนีมวลกาย" HorizontalAlignment="Left" Height="41" Margin="42,29,0,0" VerticalAlignment="Top" Width="311" FontSize="20" Grid.ColumnSpan="3"/>
+        <Label Content="Body Mass IIndex (BMI)" HorizontalAlignment="Left" Height="41" Margin="42,99,0,0" VerticalAlignment="Top" Width="311" FontSize="25" Grid.ColumnSpan="3"/>
+        <Label Content="ส่วนสูง / เซนติเมตร" HorizontalAlignment="Left" Height="41" Margin="42,0,0,0" VerticalAlignment="Center" Width="122" FontSize="15"/>
+        <Label Content="น้ำหนัก / กิโลกรัม" HorizontalAlignment="Left" Height="41" Margin="42,258,0,0" VerticalAlignment="Top" Width="122" FontSize="15"/>
+        <Button x:Name="btnCal" Content="คำนวณ" HorizontalAlignment="Left" Height="65" Margin="58,334,0,0" VerticalAlignment="Top" Width="250" Click="btnCal_Click" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtHeight" HorizontalAlignment="Left" Height="41" Margin="198,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="176" PreviewTextInput="txtHeight_PreviewTextInput" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="txtWeight" HorizontalAlignment="Left" Height="41" Margin="198,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" PreviewTextInput="txtWeight_PreviewTextInput" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Rectangle x:Name="rect1" HorizontalAlignment="Left" Height="47" Margin="155,343,0,0" Stroke="Black" VerticalAlignment="Top" Width="51" Fill="#FFEF9A9A" Grid.Column="2"/>
+        <Rectangle x:Name="rect" HorizontalAlignment="Right" Height="268" Margin="0,46,55,0" Stroke="Black" VerticalAlignment="Top" Width="279" Fill="White" Grid.Column="2"/>
+        <Rectangle x:Name="rect2" HorizontalAlignment="Left" Height="47" Margin="211,343,0,0" Stroke="Black" VerticalAlignment="Top" Width="51" Fill="#FFEF9A9A" Grid.Column="2"/>
+        <Rectangle x:Name="rect3" HorizontalAlignment="Left" Height="47" Margin="269,343,0,0" Stroke="Black" VerticalAlignment="Top" Width="51" Fill="#FFEF9A9A" Grid.Column="2"/>
+        <Rectangle x:Name="rect4" HorizontalAlignment="Left" Height="47" Margin="325,343,0,0" Stroke="Black" VerticalAlignment="Top" Width="51" Fill="#FFEF9A9A" Grid.Column="2"/>
+        <Rectangle x:Name="rect5" HorizontalAlignment="Left" Height="47" Margin="383,343,0,0" Stroke="Black" VerticalAlignment="Top" Width="51" Fill="#FFF31919" Grid.Column="2"/>
+        <Label Content="ดัชนีมวลกายของคุณ" HorizontalAlignment="Left" Height="50" Margin="211,72,0,0" VerticalAlignment="Top" Width="216" FontSize="20" Grid.Column="2"/>
+        <Label x:Name="lblBmi" Content="" Margin="181,140,0,0" FontSize="50" Grid.Column="2" HorizontalAlignment="Left" Width="228" Height="64" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lblStatus" Content="" HorizontalAlignment="Left" Height="59" Margin="193,240,0,0" VerticalAlignment="Top" Width="202" FontSize="25" Grid.Column="2" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btnClear" Grid.Column="2" Content="Clear" HorizontalAlignment="Left" Margin="63,366,0,0" VerticalAlignment="Top" Click="btnClear_Click"/>
+
+    </Grid>
+</Window>
